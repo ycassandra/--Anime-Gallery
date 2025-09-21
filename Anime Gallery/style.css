@@ -177,16 +177,3 @@ body {
 .anime-section.slide-up {
   transform: translateY(-100vh);
 }
-
-/* Colores personalizados para texto central */
-.text-kimetsu {
-  color: #bb86fc !important;
-}
-
-.text-attack {
-  color: #ff4b4b !important;
-}
-
-.text-dress {
-  color: #ffe066 !important;
-}
