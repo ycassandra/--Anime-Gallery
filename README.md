@@ -22,6 +22,8 @@ Mi primer proyecto web: una galería interactiva inspirada en el anime, con anim
 - JavaScript (manipulación del DOM)
 
 ---
+## 🚀 ¿Cómo usar?
 
+1. Clona este repositorio:
    ```bash
    git clone https://github.com/tu-usuario/anime-gallery.git
