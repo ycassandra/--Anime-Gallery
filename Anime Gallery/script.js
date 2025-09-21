@@ -24,22 +24,34 @@ function siguienteSeccion() {
 }
 
 function intercambiarConCentro(textoClickeado, textoEnCentro) {
-    // Quitar todas las clases de posición de ambos textos
+    // Quitar clases de posición
     textoClickeado.classList.remove('pos-arriba', 'pos-centro', 'pos-abajo');
     textoEnCentro.classList.remove('pos-arriba', 'pos-centro', 'pos-abajo');
-    
-    // El clickeado va al centro
+
+    // Asignar nuevas posiciones
     textoClickeado.classList.add('pos-centro');
-    console.log("Texto clickeado ahora en centro");
-    
-    // El que estaba en centro va a donde estaba el clickeado
-    if (textoClickeado === textoKimetsu || textoClickeado === textoAttack) {
-        // Si clickearon arriba, el del centro va arriba
+    if (textoClickeado === textoKimetsu) {
         textoEnCentro.classList.add('pos-arriba');
-        console.log("Texto del centro ahora arriba");
-    } else {
-        // Si clickearon abajo, el del centro va abajo  
+    } else if (textoClickeado === textoDress) {
         textoEnCentro.classList.add('pos-abajo');
-        console.log("Texto del centro ahora abajo");
+    } else {
+        // Si no es kimetsu ni dress, debe ser attack
+        if (textoEnCentro === textoKimetsu) {
+            textoEnCentro.classList.add('pos-arriba');
+        } else {
+            textoEnCentro.classList.add('pos-abajo');
+        }
+    }
+
+    // Cambiar fondo dinámicamente
+    const body = document.body;
+    body.classList.remove('bg-kimetsu', 'bg-attack', 'bg-dress');
+
+    if (textoClickeado === textoKimetsu) {
+        body.classList.add('bg-kimetsu');
+    } else if (textoClickeado === textoAttack) {
+        body.classList.add('bg-attack');
+    } else if (textoClickeado === textoDress) {
+        body.classList.add('bg-dress');
     }
 }
