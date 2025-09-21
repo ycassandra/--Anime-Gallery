@@ -178,16 +178,15 @@ body {
   transform: translateY(-100vh);
 }
 
-/* Fondos personalizados por anime */
-.bg-kimetsu {
-  background: linear-gradient(135deg, #3c1f46 0%, #6d3670 100%);
+/* Colores personalizados para texto central */
+.text-kimetsu {
+  color: #bb86fc !important;
 }
 
-.bg-attack {
-  background: linear-gradient(135deg, #1e2a38 0%, #3b5063 100%);
+.text-attack {
+  color: #ff4b4b !important;
 }
 
-.bg-dress {
-  background: linear-gradient(135deg, #4d2c1d 0%, #e69a5c 100%);
+.text-dress {
+  color: #ffe066 !important;
 }
-
