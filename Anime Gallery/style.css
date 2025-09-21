@@ -177,3 +177,17 @@ body {
 .anime-section.slide-up {
   transform: translateY(-100vh);
 }
+
+/* Fondos personalizados por anime */
+.bg-kimetsu {
+  background: linear-gradient(135deg, #3c1f46 0%, #6d3670 100%);
+}
+
+.bg-attack {
+  background: linear-gradient(135deg, #1e2a38 0%, #3b5063 100%);
+}
+
+.bg-dress {
+  background: linear-gradient(135deg, #4d2c1d 0%, #e69a5c 100%);
+}
+
