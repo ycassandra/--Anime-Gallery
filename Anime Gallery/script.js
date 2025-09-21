@@ -43,15 +43,16 @@ function intercambiarConCentro(textoClickeado, textoEnCentro) {
         }
     }
 
-    // Cambiar fondo dinámicamente
-    const body = document.body;
-    body.classList.remove('bg-kimetsu', 'bg-attack', 'bg-dress');
+    // Cambiar color de texto dinámicamente
+const todosLosTextos = document.querySelectorAll('.hover-text');
+todosLosTextos.forEach(texto => {
+    texto.classList.remove('text-kimetsu', 'text-attack', 'text-dress');
+});
 
-    if (textoClickeado === textoKimetsu) {
-        body.classList.add('bg-kimetsu');
-    } else if (textoClickeado === textoAttack) {
-        body.classList.add('bg-attack');
-    } else if (textoClickeado === textoDress) {
-        body.classList.add('bg-dress');
-    }
+if (textoClickeado === textoKimetsu) {
+    textoClickeado.querySelector('.hover-text')?.classList?.add('text-kimetsu');
+} else if (textoClickeado === textoAttack) {
+    textoClickeado.querySelector('.hover-text')?.classList?.add('text-attack');
+} else if (textoClickeado === textoDress) {
+    textoClickeado.querySelector('.hover-text')?.classList?.add('text-dress');
 }
