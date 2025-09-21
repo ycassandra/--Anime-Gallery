@@ -24,35 +24,22 @@ function siguienteSeccion() {
 }
 
 function intercambiarConCentro(textoClickeado, textoEnCentro) {
-    // Quitar clases de posición
+    // Quitar todas las clases de posición de ambos textos
     textoClickeado.classList.remove('pos-arriba', 'pos-centro', 'pos-abajo');
     textoEnCentro.classList.remove('pos-arriba', 'pos-centro', 'pos-abajo');
-
-    // Asignar nuevas posiciones
+    
+    // El clickeado va al centro
     textoClickeado.classList.add('pos-centro');
-    if (textoClickeado === textoKimetsu) {
+    console.log("Texto clickeado ahora en centro");
+    
+    // El que estaba en centro va a donde estaba el clickeado
+    if (textoClickeado === textoKimetsu || textoClickeado === textoAttack) {
+        // Si clickearon arriba, el del centro va arriba
         textoEnCentro.classList.add('pos-arriba');
-    } else if (textoClickeado === textoDress) {
-        textoEnCentro.classList.add('pos-abajo');
+        console.log("Texto del centro ahora arriba");
     } else {
-        // Si no es kimetsu ni dress, debe ser attack
-        if (textoEnCentro === textoKimetsu) {
-            textoEnCentro.classList.add('pos-arriba');
-        } else {
-            textoEnCentro.classList.add('pos-abajo');
-        }
+        // Si clickearon abajo, el del centro va abajo  
+        textoEnCentro.classList.add('pos-abajo');
+        console.log("Texto del centro ahora abajo");
     }
-
-    // Cambiar color de texto dinámicamente
-const todosLosTextos = document.querySelectorAll('.hover-text');
-todosLosTextos.forEach(texto => {
-    texto.classList.remove('text-kimetsu', 'text-attack', 'text-dress');
-});
-
-if (textoClickeado === textoKimetsu) {
-    textoClickeado.querySelector('.hover-text')?.classList?.add('text-kimetsu');
-} else if (textoClickeado === textoAttack) {
-    textoClickeado.querySelector('.hover-text')?.classList?.add('text-attack');
-} else if (textoClickeado === textoDress) {
-    textoClickeado.querySelector('.hover-text')?.classList?.add('text-dress');
 }
