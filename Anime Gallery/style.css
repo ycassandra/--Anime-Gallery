@@ -37,6 +37,7 @@ body {
     color: white; /* Color inicial del texto */
     transition: all 0.3s ease; /* IMPORTANTE: transición suave */
     opacity: 0.8; /* Ligera transparencia */
+    z-index: 1;
 }
 
 .text-item {
@@ -93,7 +94,7 @@ body {
     visibility: hidden; /* completamente oculto */
     transition: all 0.3s ease; /* Transición suave */
     pointer-events: none; /* No interfiere con el mouse */
-    z-index: 1000; /* Se muestra por encima */
+    z-index: 10; /* Se muestra por encima */
 }
 
 /* Cuando pasas el cursor sobre el texto, las imágenes aparecen */
